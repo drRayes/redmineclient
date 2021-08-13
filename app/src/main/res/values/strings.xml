@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Redmine client</string>
+    <string name="test_button">Get projects</string>
+    <string name="request_result">Request result</string>
+    <string name="element_text">Nothing</string>
+    <string name="move_up">Move Up</string>
+    <string name="move_down">Move Down</string>
+    <string name="delete">Delete</string>
+    <string name="more_information">More information</string>
+    <string name="project_issues">Project issues</string>
+    <string name="issue_info">Issue info</string>
+</resources>

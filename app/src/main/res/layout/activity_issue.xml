@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="issue"
+            type="com.rayes.redmineclient.model.Issue" />
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TableRow>
+            <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issue author"/>
+
+            <EditText
+                android:id="@+id/issue_author"
+                android:text="@={issue.author.name}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="issue project name"
+                />
+
+            <TextView
+                android:id="@+id/issue_project_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{issue.project.name}"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="issue tracker"/>
+
+
+            <EditText
+                android:id="@+id/issue_tracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.tracker.name}"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue status"/>
+
+            <EditText
+                android:id="@+id/issue_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{issue.status.name}" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue priority"/>
+            <EditText
+                android:id="@+id/issue_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.priority.name}" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue subject"/>
+            <EditText
+                android:id="@+id/issue_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.subject}"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue description"/>
+            <EditText
+                android:id="@+id/issue_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.description}"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue start date"/>
+            <EditText
+                android:id="@+id/issue_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.startDate}" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue due date"/>
+            <EditText
+                android:id="@+id/issue_due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.dueDate}" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue done ratio"/>
+            <EditText
+                android:id="@+id/issue_done_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.doneRatio}" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue is private"/>
+            <EditText
+                android:id="@+id/issue_is_private"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="false" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue estimated hours"/>
+            <EditText
+                android:id="@+id/issue_estimated_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.estimatedHours}"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue total estimated hours" />
+            <EditText
+                android:id="@+id/issue_total_estimated_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.totalEstimatedHours}" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue created on"/>
+            <EditText
+                android:id="@+id/issue_created_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.createdOn}" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue updated on"/>
+            <EditText
+                android:id="@+id/issue_updated_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.updatedOn}"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="issue close on"/>
+            <EditText
+                android:id="@+id/issue_close_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={issue.closeOn}" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/issue_update_button"
+            android:text="update issue"
+            android:layout_height="50sp"/>
+
+    </TableLayout>
+</ScrollView>
+</layout>
