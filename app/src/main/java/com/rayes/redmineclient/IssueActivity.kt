@@ -24,17 +24,7 @@ class IssueActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.issue_update_button)
 
         val arguments = intent.extras
-        val project: Project = Gson().fromJson(
-            arguments?.get("project").toString(),
-            Project::class.java
-        )
-        val parentIssue: Issue = Gson().fromJson(arguments?.get("issue").toString(), Issue::class.java)
-        val issue = Issue()
-        issue.project = project
-        issue.tracker = parentIssue.tracker
-        issue.status = parentIssue.status
-        issue.priority = parentIssue.priority
-        issue.author = parentIssue.author
+        val issue: Issue = Gson().fromJson(arguments?.get("issue").toString(), Issue::class.java)
 
         binding.issue = issue
 
@@ -44,7 +34,7 @@ class IssueActivity : AppCompatActivity() {
                 issue
             )
             Dispatcher(this).updateIssue(
-                "https://rayesredminetest.planio.com/issues/${parentIssue.id}.json",
+                "https://rayesredminetest.planio.com/issues/${issue.id}.json",
                 issue
             )
         }
